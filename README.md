@@ -18,7 +18,7 @@ Easily replace variables like `*obj` or `*style` in your prompts using templates
 1. Navigate to your `ComfyUI/custom_nodes` folder
 2. Clone this repository:
 ```bash
-git clone https://github.com/DaniilVdovin/ComfyUI-Prompt-Template.git
+git clone https://github.com/DaniilVdovin/ComfyUI-prompt-templating.git
 ```
 3. Restart ComfyUI
 
