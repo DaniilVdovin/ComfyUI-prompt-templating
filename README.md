@@ -1,3 +1,6 @@
+<img width="128" height="128" alt="icon" src="https://github.com/user-attachments/assets/3ce4e6bc-b868-454b-a2bd-3c805ad63bd9" />
+
+
 # ComfyUI Prompt Template
 
 Easily replace variables like `*obj` or `*style` in your prompts using templates.
