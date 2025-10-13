@@ -1,7 +1,7 @@
 [project]
 name = "prompt-templating"
 description = "Easily replace variables like *obj or *style in your prompts using templates."
-version = "1.0.0"
+version = "1.0.1"
 license = {file = "LICENSE"} 
 
 
