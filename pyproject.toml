@@ -1,0 +1,19 @@
+[project]
+name = "prompt-templating"
+description = "Easily replace variables like *obj or *style in your prompts using templates."
+version = "1.0.0"
+license = {file = "LICENSE"} 
+
+
+[project.urls]
+Repository = "https://github.com/DaniilVdovin/ComfyUI-prompt-templating"
+#  Used by Comfy Registry https://registry.comfy.org
+Documentation = "https://github.com/DaniilVdovin/ComfyUI-prompt-templating/wiki"
+"Bug Tracker" = "https://github.com/DaniilVdovin/ComfyUI-prompt-templating/issues"
+
+[tool.comfy]
+PublisherId = "daniil-vdovin"
+DisplayName = "ComfyUI-prompt-templating"
+Icon = ""
+includes = []
+
