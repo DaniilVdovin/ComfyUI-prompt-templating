@@ -131,7 +131,7 @@ class PromptTemplateGetManyRandomTemplates:
         }
         
     RETURN_TYPES = ("STRING",)
-    RETURN_NAMES = ("template")
+    RETURN_NAMES = ("template",)
     FUNCTION = "execute"
     CATEGORY = "MIM_Prompts"
 

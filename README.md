@@ -66,7 +66,7 @@ This node allows you to select a random set from a list of template parts and re
 
 ![Get Random](images/Prompt_Template_Get_Random.png)
 
-Example Workflow
+Example Workflow:
 
 ![HowUseGetRandom](images/HowUseGetRandom.png)
 
