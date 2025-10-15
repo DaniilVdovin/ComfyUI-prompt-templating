@@ -1,9 +1,10 @@
+import random
 import comfy
 import nodes
 import json
 import re
 
-class PromtTemplateJson:
+class PromptTemplateJson:
     @classmethod
     def INPUT_TYPES(s):
         return {
@@ -57,7 +58,7 @@ class PromtTemplateJson:
         
         return ([[pos_cond, {"pooled_output": pos_pooled}]], [[neg_cond, {"pooled_output": neg_pooled}]], pos_prompt, neg_prompt, variables_json)
 
-class PromtTemplateKeyValue:
+class PromptTemplateKeyValue:
     @classmethod
     def INPUT_TYPES(s):
         return {
@@ -115,3 +116,37 @@ class PromtTemplateKeyValue:
             pos_prompt,
             neg_prompt
         )
+class PromptTemplateGetManyRandomTemplates:
+    @classmethod
+    def INPUT_TYPES(s):
+        return {
+            "optional": {
+                "TemplatesParts": ("STRING", {
+                    "default": "",
+                    "multiline": True,
+                    "placeholder": "value\nvalue2\nvalue3"
+                }),
+                "Count": ("INT", {"default": 1, "min": 1, "max": 1000}),
+            }
+        }
+        
+    RETURN_TYPES = ("STRING",)
+    RETURN_NAMES = ("template")
+    FUNCTION = "execute"
+    CATEGORY = "MIM_Prompts"
+
+    def execute(self, TemplatesParts="", Count=1, **kwargs):
+        if not TemplatesParts:
+            return ("",)
+
+        lines = [line.strip() for line in TemplatesParts.splitlines() if line.strip()]
+        unique_templates = list(dict.fromkeys(lines))
+
+        if not unique_templates:
+            return ("",)
+
+        actual_count = min(Count, len(unique_templates))
+
+        selected = random.sample(unique_templates, actual_count)
+
+        return (", ".join(selected),)

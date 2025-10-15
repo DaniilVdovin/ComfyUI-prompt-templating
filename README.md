@@ -60,6 +60,16 @@ Issues: I can't display this node correctly in a smaller view; it only looks goo
 Example Workflow:
 ![Prompt Template (Constructor)](images/Prompt_Template_Constuctor_node.png)
 
+### 🧩 Get Random Templates
+
+This node allows you to select a random set from a list of template parts and returns a string
+
+![Get Random](images/Prompt_Template_Get_Random.png)
+
+Example Workflow
+
+![HowUseGetRandom](images/HowUseGetRandom.png)
+
 ### 🧩 Features on using multiple nodes at once:
 
 JSON nodes can be freely combined with each other to get different results, such as different values for the same key, different keys for the same value, and so on. Here is a small example of implementation 
